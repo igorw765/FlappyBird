@@ -16,11 +16,14 @@ public class Player : MonoBehaviour
     bool paused;
     float time;
 
+    //bool pauseButtonPressed;
+
     void Start()
     {
         jumpForce = 50f;
         rb.position = new Vector3(0, 0, 0);
         dead = false;
+        //pauseButtonPressed = ControllsManager.instance.paused;
         PauseGame();
         SoundManager.PlaySound(SoundManager.Sound.swoosh);
         
